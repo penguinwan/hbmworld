@@ -5,7 +5,7 @@ import java.util.Date;
 public class StockDailyRecord implements java.io.Serializable {
 
     private Integer recordId;
-    private Stock stock;
+    //private Integer stock;
     private Float priceOpen;
     private Float priceClose;
     private Float priceChange;
@@ -23,13 +23,13 @@ public class StockDailyRecord implements java.io.Serializable {
         this.recordId = recordId;
     }
 
-    public Stock getStock() {
-        return stock;
-    }
-
-    public void setStock(Stock stock) {
-        this.stock = stock;
-    }
+//    public Integer getStockId() {
+//        return stock;
+//    }
+//
+//    public void setStockId(Integer stock) {
+//        this.stock = stock;
+//    }
 
     public Float getPriceOpen() {
         return priceOpen;

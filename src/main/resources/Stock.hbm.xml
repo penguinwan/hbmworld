@@ -15,7 +15,7 @@
         </property>
         <set name="stockDailyRecords" table="stock_daily_record" inverse="false" cascade="all">
             <key>
-                <column name="STOCK_ID" not-null="true" />
+                <column name="STOCK_ID"/>
             </key>
             <one-to-many class="com.penguinwan.hbmworld.StockDailyRecord" />
         </set>
