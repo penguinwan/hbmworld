@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.penguinwan.hbmworld.StockDailyRecord" table="stock_daily_record" catalog="mysql">
+        <id name="recordId" type="java.lang.Integer">
+            <column name="RECORD_ID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="stock" class="com.penguinwan.hbmworld.Stock">
+            <column name="STOCK_ID" />
+        </many-to-one>
+        <property name="priceOpen" type="java.lang.Float">
+            <column name="PRICE_OPEN" precision="6" />
+        </property>
+        <property name="priceClose" type="java.lang.Float">
+            <column name="PRICE_CLOSE" precision="6" />
+        </property>
+        <property name="priceChange" type="java.lang.Float">
+            <column name="PRICE_CHANGE" precision="6" />
+        </property>
+        <property name="volume" type="java.lang.Long">
+            <column name="VOLUME" />
+        </property>
+        <property name="date" type="date">
+            <column name="DATE" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
